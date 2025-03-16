@@ -49,3 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
     container.appendChild(button);
 });
 
+document.getElementById('startAnimation').addEventListener('click', function() {
+    const box = document.getElementById('animatedBox');
+    box.style.transform = 'translateX(300px)';
+});
