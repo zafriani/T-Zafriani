@@ -104,63 +104,83 @@ Dalam laporan/tugas ini, akan dibahas lebih lanjut mengenai manfaat perpustakaan
 <body>
     <script src="script.js"></script>
 </body>
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animasi Latar Love</title>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-            background-color: #88ff9c;
-        }
-        .heart {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: red;
-            clip-path: polygon(50% 0%, 100% 35%, 85% 100%, 50% 75%, 15% 100%, 0% 35%);
-            opacity: 0.7;
-            animation: float 5s linear infinite;
-        }
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) scale(1);
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-10vh) scale(1.5);
-                opacity: 0;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Background</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #76d8a7;
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+
+    .background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1; /* di belakang konten */
+      overflow: hidden;
+    }
+
+    .heart {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: red;
+      clip-path: polygon(50% 0%, 100% 35%, 85% 100%, 50% 75%, 15% 100%, 0% 35%);
+      animation: float 4s linear forwards;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      0%   { transform: translateY(100vh) scale(1); opacity: 0; }
+      30%  { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      padding: 50px;
+      text-align: center;
+      color: #0a6f7c;
+    }
+  </style>
 </head>
 <body>
-    <script>
-        function createHeart() {
-            const heart = document.createElement("div");
-            heart.classList.add("heart");
-            document.body.appendChild(heart);
-            
-            const size = Math.random() * 20 + 10 + "px";
-            heart.style.width = size;
-            heart.style.height = size;
-            heart.style.left = Math.random() * 100 + "vw";
-            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
-            
-            setTimeout(() => {
-                heart.remove();
-            }, 5000);
-        }
-        setInterval(createHeart, 300);
-    </script>
+
+  <!-- Latar belakang hati -->
+  <div class="background" id="bg"></div>
+
+  <!-- Konten utama -->
+  <main>
+    <h1>Selamat Datang 💚</h1>
+    <p>Latar belakang hati ini tidak mengganggu konten utama.</p>
+  </main>
+
+  <script>
+    const bg = document.getElementById("bg");
+
+    setInterval(() => {
+      const h = document.createElement("div");
+      h.className = "heart";
+      h.style.left = Math.random() * 100 + "vw";
+      const size = 10 + Math.random() * 15 + "px";
+      h.style.width = h.style.height = size;
+      h.style.animationDuration = 3 + Math.random() * 2 + "s";
+      bg.appendChild(h);
+      setTimeout(() => h.remove(), 5000);
+    }, 400);
+  </script>
 </body>
-</html> 
+</html>
+
 <footer>
     <p>&copy;  Perpustakaan T Zafriani 
 <footer>
