@@ -157,44 +157,51 @@ Dalam laporan/tugas ini, akan dibahas lebih lanjut mengenai manfaat perpustakaan
   });
 </script>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Event & Berita</title>
+  <meta charset="UTF-8">
+  <title>Instagram Event Thumbnails</title>
   <style>
-    .container {
+    .instagram-row {
       display: flex;
-      flex-wrap: wrap;
+      justify-content: center;
       gap: 20px;
+      flex-wrap: wrap;
+      padding: 20px;
     }
-    .box {
-      flex: 1;
-      min-width: 300px;
+
+    .instagram-thumbnail {
+      width: 200px;
+      transform: scale(0.85);
+      transform-origin: top left;
     }
   </style>
 </head>
 <body>
-    
-<div style="display: flex; gap: 10px; justify-content: center;">
-  <div style="width: 200px; transform: scale(0.8); transform-origin: top left;">
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DJN43NhyjdO/?igsh=NjZmdjQ1d2dudm03"
-      data-instgrm-version="14"
-      style="width:100%; margin: auto;">
-    </blockquote>
+
+  <div class="instagram-row">
+    <div class="instagram-thumbnail">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DJN43NhyjdO/?igsh=NjZmdjQ1d2dudm03"
+        data-instgrm-version="14"
+        style="width:100%; margin: auto;">
+      </blockquote>
+    </div>
+
+    <div class="instagram-thumbnail">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DJUKqqoTbnz/?igsh=a2RpZnFtd29rYWZ4"
+        data-instgrm-version="14"
+        style="width:100%; margin: auto;">
+      </blockquote>
+    </div>
   </div>
 
-  <div style="width: 200px; transform: scale(0.8); transform-origin: top left;">
-    <blockquote class="instagram-media"
-      data-instgrm-permalink="https://www.instagram.com/p/DJUKqqoTbnz/?igsh=a2RpZnFtd29rYWZ4"
-      data-instgrm-version="14"
-      style="width:100%; margin: auto;">
-    </blockquote>
-  </div>
-</div>
+  <script async src="//www.instagram.com/embed.js"></script>
 
-<script async src="//www.instagram.com/embed.js"></script>
-
-    
+</body>
+</html>
+   
 </body>
 </html>
 <!DOCTYPE html>
