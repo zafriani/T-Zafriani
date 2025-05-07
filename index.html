@@ -136,7 +136,7 @@ Dalam laporan/tugas ini, akan dibahas lebih lanjut mengenai manfaat perpustakaan
 </head>
 <body>
 
-<h2 id="judul">Arahkan mouse ke sini</h2>
+<h2 id="judul">Event Dan Berita </h2>
 
 <script>
   const judul = document.getElementById("judul");
@@ -156,73 +156,85 @@ Dalam laporan/tugas ini, akan dibahas lebih lanjut mengenai manfaat perpustakaan
     judul.style.color = warnaAwal;
   });
 </script>
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Event & Berita</title>
-  <style>
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-     color : #28af41 
-    }
-    .box {
-      flex: 1;
-      min-width: 300px;  
-    }
+
     
-  </style>
-</head>
-<body>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Instagram Thumbnails</title>
+  <title>Instagram Grid Thumbnails</title>
   <style>
-    .instagram-container {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
       padding: 20px;
     }
 
+    .instagram-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
     .instagram-box {
-      width: 220px;
-      height: 280px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      height: 250px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
       background-color: #fff;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px;
     }
 
     .instagram-box blockquote {
-      width: 100% !important;
-      margin: 0 !important;
-      transform: scale(0.85);
+      transform: scale(0.7);
       transform-origin: top left;
+      margin: 0;
+      width: 100% !important;
+    }
+
+    .instagram-description {
+      font-size: 12px;
+      text-align: center;
+      margin-top: 8px;
+      color: #333;
     }
   </style>
 </head>
 <body>
 
-  <div class="instagram-container">
+  <div class="instagram-grid">
+    <!-- Event 1 -->
     <div class="instagram-box">
       <blockquote class="instagram-media"
         data-instgrm-permalink="https://www.instagram.com/p/DJN43NhyjdO/?igsh=NjZmdjQ1d2dudm03"
         data-instgrm-version="14">
       </blockquote>
+      <div class="instagram-description">Event A: Kegiatan Komunitas</div>
     </div>
 
+    <!-- Event 2 -->
     <div class="instagram-box">
       <blockquote class="instagram-media"
         data-instgrm-permalink="https://www.instagram.com/p/DJUKqqoTbnz/?igsh=a2RpZnFtd29rYWZ4"
         data-instgrm-version="14">
       </blockquote>
+      <div class="instagram-description">Event B: Workshop Kreatif</div>
+    </div>
+
+    <!-- Event 3 -->
+    <div class="instagram-box">
+      <blockquote class="instagram-media"
+        data-instgrm-permalink="https://www.instagram.com/p/DJRSbXxTCHA/?igsh=ZnEyMHA3bWtpa3d3"
+        data-instgrm-version="14">
+      </blockquote>
+      <div class="instagram-description">Event C: Kegiatan Outdoor</div>
     </div>
   </div>
 
@@ -231,8 +243,35 @@ Dalam laporan/tugas ini, akan dibahas lebih lanjut mengenai manfaat perpustakaan
 </body>
 </html>
 
-  
-<footer>
-    <p>&copy; Perpustakaan T Zafriani</p>
-</footer>
 
+
+</body>
+</html>
+
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabel Perkalian 10×10</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<footer>
+    <p>&copy; 2025 Perpustakaan T Zafriani</p>
+</footer>
