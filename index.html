@@ -271,7 +271,40 @@ Dalam laporan/tugas ini, akan dibahas lebih lanjut mengenai manfaat perpustakaan
         }
     </style>
 </head>
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #cookieBanner {
+      display: none; position: fixed; bottom: 0; left: 0; right: 0;
+      background: #479450; color: #fff; padding: 10px; text-align: center;
+    }
+    #cookieBanner button {
+      margin-left: 10px; padding: 5px 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="cookieBanner">
+    Situs ini pakai cookies. <button onclick="accept()">Setuju</button>
+  </div>
 
+  <script>
+    function setCookie(n, v, d) {
+      document.cookie = `${n}=${v}; max-age=${d*86400}; path=/`;
+    }
+    function getCookie(n) {
+      return document.cookie.includes(n + "=");
+    }
+    function accept() {
+      setCookie("cookieOK", "yes", 30);
+      banner.style.display = "none";
+    }
+    const banner = document.getElementById("cookieBanner");
+    if (!getCookie("cookieOK")) banner.style.display = "block";
+  </script>
+</body>
+</html>
 <footer>
     <p>&copy; 2025 Perpustakaan T Zafriani</p>
 </footer>
